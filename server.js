@@ -10,19 +10,19 @@ const port = process.env.PORT || 9000;
 
 
 const pusher = new Pusher({
-    appId: "1861199",
-    key: "7176d61e9b7596f89957",
-    secret: "4b2c2cec15345410e58d",
-    cluster: "us3",
+    appId: "0",
+    key: "0",
+    secret: "0",
+    cluster: "0",
     useTLS: true
-  });
+  }); // add own API Data
 
 // Middleware
 app.use(express.json());  // Middleware to parse JSON bodies
 app.use(cors());
 
 // DB configuration
-const connection_url = 'mongodb+srv://MuhammadShoaib:Kingcar321@cluster1.erv7d.mongodb.net/?retryWrites=true&w=majority&appName=Cluster1';
+const connection_url = 'mongodb+srv://@cluster1.erv7d.mongodb.net/?retryWrites=true&w=majority&appName=Cluster1'; // add own db configuration
 
 // Connect to MongoDB
 mongoose.connect(connection_url, {
